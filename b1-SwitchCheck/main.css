@@ -1,0 +1,52 @@
+/*
+phan tich chuyen dong cua doi tuong check switch thanh 
+2 trang thai, dungf transition tao hieu ung di chuyen */
+
+body{
+	background-color: #f3f3f3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.switch{
+	-webkit-appearance: none;
+	appearance:none;
+	/*khoi phuc ve mac dinh*/
+	width: 84px;
+	height: 44px;
+	background-color: #c6c6c6;
+	border-radius: 40px;
+	border:1px solid gray;
+	outline: none; 
+	/*duongvien*/
+	position:relative;
+	transition: 200ms;
+}
+.switch:checked {
+	background-color: mediumseagreen;
+	border:1px solid mediumseagreen ;
+}
+
+.switch:before{
+	content: '';
+	width:42px;
+	height: 42px;
+	position:absolute;
+	/*can chinh vi tri theo doi tuong relative*/
+	background-color: #fff;
+	border-radius: 50%;
+	/*tao ban kinh cho doi tuong moi*/
+	top:0px;
+	left:0px;
+	transition: 200ms;
+	/*them thoi gian chuyen dong*/
+
+}
+
+/*lop switch check tac dong den lop before*/
+.switch:checked:before{
+	/*thay doi vi tri cua doi tuong tron*/
+	left:41px;
+
+}
